@@ -1,0 +1,132 @@
+
+
+// ORNEK 1
+/* BURADA EMAIL VE TEL NO GIBI BILGILERIN GOSTERILDIGI
+   SABIT BIR ILETISIM SAYFASI OLUSTURDUK
+   BUNUN ICIN CONTAINER, COLUMN, ROW, SIZEDBOX, ICON VE TEXT GIBI
+   WIDGETLERDEN FAYDALANDIK ! */
+
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+void main() {
+  runApp(BenimUygulamam());
+}
+
+// WIDGET OLUSTURMAK //
+
+/* Benim Uygulamam wigeti */
+class BenimUygulamam extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      /*
+      theme: ThemeData(fontFamily: 'Pasifico'),
+      Bu kodu yazdigimizda tüm uygulamanin varsayilan fontunu belirlemis oluruz! 
+      */
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.brown[300],
+          body: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const CircleAvatar(
+                  radius: 70,
+                  backgroundColor: Colors.lime,
+                  backgroundImage: AssetImage('images/coffe2.jpg'),
+                ),
+               
+               
+                /*
+                Text('Kahve Dünyasi',
+                    style: GoogleFonts.grandHotel(
+                      fontSize: 60,
+                      color: Colors.amber[700],
+                      fontWeight: FontWeight.normal,
+                    )), */
+
+
+
+                    
+                const Text(
+                  'Kahve Dünyasi',
+                  style: TextStyle(
+                    fontFamily: 'Pasifico',
+                    color: Colors.amber,
+                    fontSize: 45,
+                  ),
+                ),
+                const Text(
+                  "' BIR FINCAN UZAGINIZDA '",
+                  style: TextStyle(
+                    //fontFamily: 'Pasifico',
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Container(
+                  color: Colors.brown,
+                  margin: EdgeInsets.symmetric(horizontal: 80),
+                  padding: EdgeInsets.all(9.0),
+                  child: Row(
+                    children: const [
+                      Icon(
+                        Icons.email,
+                        color: Colors.white,
+                        size: 35,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'info@kahvedunyasi.com',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Container(
+                  color: Colors.brown,
+                  margin: const EdgeInsets.symmetric(horizontal: 80),
+                  padding: const EdgeInsets.all(9.0),
+                  child: Row(
+                    children: const [
+                      Icon(
+                        Icons.phone_in_talk,
+                        color: Colors.white,
+                        size: 35,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        '0032 485 584903',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/* -------------------------------------------------------------------*/
+/* ORNEK 1 SONU*/
